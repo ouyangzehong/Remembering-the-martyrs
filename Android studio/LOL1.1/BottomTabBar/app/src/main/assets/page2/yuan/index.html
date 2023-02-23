@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁隆平</title>
+
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <style>
+      @import url('css/0dd49c0512ab428e9620c8bcb3651a0a.css');
+
+      /* _variables.css */
+
+      /* _mixins.css */
+
+      /* _global.css */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #000;
+        /* background: url(img/bg.jpg) #292929  center no-repeat;
+        background-size: contain; */
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .bg-img {
+        width: 100vw;
+        position: fixed;
+        z-index: -1;
+        top: 35%;
+        /* height: 77vh; */
+      }
+
+      /* _site-header.css */
+      .site-header {
+        text-align: center;
+        padding: 40px 0;
+        color: #fff;
+      }
+      .site-header__title {
+        font-size: 36px;
+        color: #fff;
+      }
+      .site-header__content {
+        background: #fff;
+        border-radius: 6px;
+        color: #000;
+        font-size: 19px;
+        line-height: 28px;
+        padding: 1em;
+      }
+
+      /* _wrapper.css */
+      .wrapper {
+        padding-left: 18px;
+        padding-right: 18px;
+        max-width: 1236px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* _timeline.css */
+      .timeline {
+        position: relative;
+        margin: 30px auto;
+        padding: 60px 0;
+      }
+	  /* 最长的竖直线*/
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 4px;
+        height: 100%;
+        background-color: #2f3827;
+      }
+      @media (min-width: 800px) {
+        .timeline::before {
+          left: 50%;
+          margin-left: -2px;
+        }
+      }
+      .timeline__item {
+        margin-bottom: 100px;
+        position: relative;
+      }
+      .timeline__item::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+	  /* nth-child(2n)第偶数个子元素*/
+      .timeline__item:nth-child(2n) .timeline__item__content {
+        float: right;
+      }
+      .timeline__item:nth-child(2n) .timeline__item__content::before {
+        content: '';
+        right: 40%;
+      }
+      @media (min-width: 800px) {
+        .timeline__item:nth-child(2n) .timeline__item__content::before {
+          left: inherit;
+        }
+      }
+	  /* 偶数时间样式*/
+      .timeline__item:nth-child(2n) .timeline__item__content__date {
+        background-color:   #55aa00;
+      }
+	  /* 没啥用*/
+      .timeline__item:nth-child(2n) .timeline__item__content__description {
+        color: #b292c5;
+      }
+      .timeline__item:last-child {
+        margin-bottom: 0;
+      }
+	  /* item*/
+      .timeline__item-bg {
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        color: #fff;
+      }
+	  /* 获得焦点后偶数圆的样式*/
+      .timeline__item-bg:nth-child(2n) .timeline__item__station {
+        background-color: #6d7932;
+      }
+      .timeline__item-bg:nth-child(2n) .timeline__item__content {
+        background-color: #6d7932;
+      }
+      .timeline__item-bg:nth-child(2n) .timeline__item__content::before {
+        background-color: #6d7932;
+      }
+      .timeline__item-bg:nth-child(2n) .timeline__item__content__description {
+        color: #fff;
+      }
+	  /* 获得焦点后奇数圆的样式*/
+      .timeline__item-bg .timeline__item__station {
+        background-color: #ddc360;
+      }
+      .timeline__item-bg .timeline__item__content {
+        background-color: #ddc360;
+      }
+      .timeline__item-bg .timeline__item__content::before {
+        background-color: #ddc360;
+      }
+      .timeline__item-bg .timeline__item__content__description {
+        color: #fff;
+      }
+	  /* 圆圈*/
+      .timeline__item__station {
+        background-color: #4b6618;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        top: 0;
+        left: 10%;
+        margin-left: -33px;
+        border: 4px solid #86914b;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      @media (min-width: 800px) {
+        .timeline__item__station {
+          left: 50%;
+          margin-left: -30px;
+          width: 60px;
+          height: 60px;
+          padding: 15px;
+          border-width: 6px;
+        }
+      }
+	  /* 方框*/
+      .timeline__item__content {
+        width: 80%;
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 6px;
+        float: right;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      @media (min-width: 800px) {
+        .timeline__item__content {
+          width: 40%;
+          float: inherit;
+          padding: 30px 40px;
+        }
+      }
+	  /* 圆圈和方框之间的连接线*/
+      .timeline__item__content::before {
+        content: '';
+        position: absolute;
+        left: 10%;
+        background: #55aa7f;
+        top: 20px;
+        width: 10%;
+        height: 4px;
+        z-index: -1;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      @media (min-width: 800px) {
+        .timeline__item__content::before {
+          left: 40%;
+          top: 30px;
+          height: 4px;
+          margin-top: -2px;
+        }
+      }
+	  /* 奇数时间容器*/
+      .timeline__item__content__date {
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 15px;
+        margin-bottom: 10px;
+        background-color: #dfdf6f;
+        color: #fff;
+        display: inline-block;
+        border-radius: 4px;
+        border: 2px solid #fff;
+      }
+	  /* 文字描述*/
+      .timeline__item__content__description {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #65adb7;
+      }
+      @media (min-width: 800px) {
+        .timeline__item__content__description {
+          font-size: 19px;
+          line-height: 28px;
+        }
+      }
+
+      /* _site-footer.css */
+	  /* 好像没啥用*/
+      .site-footer {
+        padding: 50px 0 200px 0;
+      }
+      .site-footer__text {
+        color: #e6e6e6;
+        font-size: 14px;
+        text-align: center;
+      }
+      .site-footer__text__link {
+        color: #8287a9;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <img src="./img/bg.jpg" class="bg-img" alt="" />
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-header__title">米香弥漫常忆公</h1>
+        
+        <p> 2021年5月22日13时07分,“共和国勋章”获得者、中国工程院院士、国家杂交水稻工程技术研究中心主任、湖南省政协原副主席袁隆平,因多器官功能衰竭,在长沙逝世,享年91岁</p>
+        <p class="site-header__content">
+          <img src="img/ping.jpg" alt="" />
+        </p>
+        <video style="width: 100%; border-radius: 6px;" src="img/video.mp4" controls  autoplay loop ></video>
+        <!-- <p class="site-header__content">
+          出生于上世纪30年代的袁隆平,于1949年入学西南农学院农学系,期间曾报名参加空军,后因在校大学生更需参加经济建设而未入伍,继续留校学 中
+        </p> -->
+      </div>
+    </header>
+
+    <section class="timeline">
+      <div class="wrapper">
+        <div class="timeline__item timeline__item--0">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <div>
+              <h2 class="timeline__item__content__date">1930年9月7日</h2>
+              <p class="timeline__item__content__description">出生,籍贯江西省九江市德安县</p>
+            </div>
+            <img src="img/袁幼年与母亲.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--1">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <div>
+              <h2 class="timeline__item__content__date">1931年-1936年</h2>
+              <p class="timeline__item__content__description">随父母居住北平、天津、江西九江、江西赣州、湖北汉口等地</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--2">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1949年-1950年</h2>
+            <p class="timeline__item__content__description">就读重庆北碚夏坝的相辉学院农学系</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--3">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1949年-1953年</h2>
+            <p class="timeline__item__content__description">在西南农学院农学系农作物专业学习</p>
+            <img src="img/西南农学院.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--4">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1950年-1953年</h2>
+            <p class="timeline__item__content__description">
+              院系调整并入重庆新建的西南农学院农学系,袁隆平续读3年至毕业1951年
+              在西南农学院报名参加空军,体检、政审合格,后因在校大学生更需参加经济建设,而未入伍,继续留校学习
+            </p>
+			<img src="img/袁隆平青年.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--5">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1953年</h2>
+            <p class="timeline__item__content__description">
+              毕业于西南农学院。服从全国统一分配,到湖南省怀化地区的安江农校任教，1953年8月-1971年1月任湖南省安江农业学校教员
+            </p>
+            
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--6">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1964年</h2>
+            <p class="timeline__item__content__description">与农技干部邓则结婚</p>
+            <img src="img/袁隆平与妻子.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--7">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1971年-1984年</h2>
+            <p class="timeline__item__content__description">任湖南省农业科学院水稻所研究员,省杂交水稻研究协作组成员</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--8">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1979年</h2>
+            <p class="timeline__item__content__description">
+              任农业部科学技术委员会委员、中国作物会副理事长、中国遗传学会理事、湖南省生物学会理事、湖南省遗传育种学会副理事长、湖南省农学会理事
+            </p>
+            <img src="img/7.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--9">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1982年</h2>
+            <p class="timeline__item__content__description">被聘为农牧渔业部技术顾问、中国杂交稻专家顾问组副组长</p>
+            <img src="img/3.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--10">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1984年</h2>
+            <p class="timeline__item__content__description">湖南杂交水稻研究中心成立,袁隆平任中心主任</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--11">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1985年</h2>
+            <p class="timeline__item__content__description">被聘为湖南省安江农校名誉校长、西南农业大学兼职教授</p>
+          <img src="img/5.jpeg" alt="" />
+		  </div>
+        </div>
+        <div class="timeline__item timeline__item--13">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1988年-1995年</h2>
+            <p class="timeline__item__content__description">湖南省政协副主席,湖南杂交水稻研究中心主任,湖南省农业科学院名</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--14">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1991年</h2>
+            <p class="timeline__item__content__description">任湖南省农业科学院名誉院长。同年受聘合国粮农组织国际首席顾问</p>
+            <img src="img/10.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--15">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">1995年-2016年</h2>
+            <p class="timeline__item__content__description">湖南省政协副主席,国家杂交水稻工程技术研究中心主任(1995年当选为中国工程院院士)</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--16">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2003年</h2>
+            <p class="timeline__item__content__description">海南省人民政府在三亚市举行仪式,聘请袁隆平院士为海南省政府高级科技顾问</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--17">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2005年</h2>
+            <p class="timeline__item__content__description">
+              被贵州省人民政府聘为贵州省农业科学院顾问 2008年 担任湖南生物机电职业技术学院名誉院长2013年 当选湖南省政协副主席 当选政协十二届中国委员会常务委员
+              袁隆平辞免湖南省政协副主席职务 ,聘请袁隆平院士为海南省政府高级科技顾问
+            </p>
+            <img src="img/8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--18">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2008年</h2>
+            <p class="timeline__item__content__description">
+              担任湖南生物机电职业技术学院名誉院长2013年 当选湖南省政协副主席 当选政协十二届中国委员会常务委员 袁隆平辞免湖南省政协副主席职务
+              ,聘请袁隆平院士为海南省政府高级科技顾问
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--19">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2013年</h2>
+            <p class="timeline__item__content__description">
+              当选湖南省政协副主席 当选政协十二届中国委员会常务委员 袁隆平辞免湖南省政协副主席职务 ,聘请袁隆平院士为海南省政府高级科技顾问
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--20">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2018年</h2>
+            <p class="timeline__item__content__description">当选为中国发明协会“会士”</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--21">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2019年</h2>
+            <p class="timeline__item__content__description">任袁隆平国际高端农业人才培养中心理事会主席</p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--22">
+          <div class="timeline__item__station"></div>
+          <div class="timeline__item__content">
+            <h2 class="timeline__item__content__date">2020年</h2>
+            <p class="timeline__item__content__description">
+              由隆平高科出资成立的第三代杂交水稻种业有限公司在长沙揭牌,袁平任董事长。同日,袁隆平应邀担任重庆市北碚区人民政府顾问
+            </p>
+            <img src="img/2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function customWayPoint(className, addClassName, customOffset) {
+        var waypoints = $(className).waypoint({
+          handler: function (direction) {
+            if (direction == 'down') {
+              $(className).addClass(addClassName)
+            } else {
+              $(className).removeClass(addClassName)
+            }
+          },
+          offset: customOffset,
+        })
+      }
+
+      var defaultOffset = '50%'
+
+      for (i = 0; i < 23; i++) {
+        customWayPoint('.timeline__item--' + i, 'timeline__item-bg', defaultOffset)
+      }
+    </script>
+  </body>
+</html>

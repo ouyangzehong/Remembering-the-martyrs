@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-emphasis: none;
+}
+li {
+  list-style: none;
+}
+.container {
+   background: url(../img/beijing1.jpg) repeat; 
+  min-height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+.container .imgbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .imgbox li {
+  width: 20%;
+  padding: 1px;
+  height: 66px;
+  
+}
+.container .imgbox a {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #bcbcbc;
+}
+
+.infoBox {
+  margin: 10px 0;
+  display: flex;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.infoBox .left {
+  width: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  border-right: 1px solid #000000;
+  margin-right: 10px;
+  background-color: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 8px;
+}
+.infoBox .right {
+  position: relative;
+  flex: 1;
+  
+ 
+}
+.infoBox .right h1 {
+  /* background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f2e0a2), to(#edd575)); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #000000;
+  font-size: 20px;
+   margin-left: 6px;
+}
+.infoBox .right p {
+	margin-top: 8px;
+	margin-left: 6px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #000000;
+  font-size: 18px;
+  
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/drawerlayout"
+    android:layout_height="match_parent">
+    <!--主布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/activity_main"/>"
+    </LinearLayout>
+    <!--左侧的布局-->
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white">
+
+        <include layout="@layout/activity_fg_left"/>
+        <!--这里通过listview放其他控件-->
+        <ListView
+            android:id="@+id/left_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Information">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:id="@+id/nn"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/h_back"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/myhead"
+            android:src="@drawable/touxing"
+            android:layout_centerInParent="true"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/h_back"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/user_line"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/white" />
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/user_line"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+        />
+    <ImageView
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#efeeee" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/list_view"/>
+
+
+
+
+
+
+</LinearLayout>

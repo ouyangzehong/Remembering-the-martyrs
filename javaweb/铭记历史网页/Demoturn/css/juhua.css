@@ -1,0 +1,244 @@
+			.chryouter{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 63%;
+				height: 30%;
+				transform: translate(-50%,-60%);
+				
+			}
+			#chryouter1{
+				position: absolute;
+				left: 0%;
+				bottom: 2%;
+				width: 40%;
+				height: 45%;
+				transform: rotate(30deg);
+				animation-name: ju1move;
+				animation-duration: 3.5s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju1move{
+				0% {transform: rotate(30deg);}
+				25% {transform: rotate(25deg);}
+				50% {transform: rotate(22deg);}
+				75% {transform: rotate(25deg);}
+				100% {transform: rotate(30deg);}
+			}
+			#chryouter2{
+				position: absolute;
+				left: 35%;
+				bottom: 2%;
+				width: 20%;
+				height: 25%;
+				transform: rotate(30deg);
+				animation-name: ju2move;
+				animation-duration: 3s;
+				
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju2move{
+				0% {transform: translate(0,0);}
+				25% {transform: translate(-1%,0);}
+				50% {transform: translate(-3%,0);}
+				75% {transform: translate(-1%,0);}
+				100% {transform: translate(0,0);}
+			}
+			#chryouter3{
+				position: absolute;
+				right: 0%;
+				bottom: 2%;
+				width: 30%;
+				height: 35%;
+				transform: rotate(30deg);
+				animation-name: ju3move;
+				animation-duration: 3s;
+				
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju3move{
+				0% {transform: rotate(30deg);}
+				25% {transform: rotate(28deg);}
+				50% {transform: rotate(27deg);}
+				75% {transform: rotate(28deg);}
+				100% {transform: rotate(30deg);}
+			}
+			#chryouter4{
+				position: absolute;
+				left: 0%;
+				bottom: 35%;
+				width: 25%;
+				height: 30%;
+				transform: rotate(30deg);
+				animation-name: ju4move;
+				animation-duration: 3s;
+				
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju4move{
+				0% {transform: rotate(30deg);}
+				25% {transform: rotate(28deg);}
+				50% {transform: rotate(25deg);}
+				75% {transform: rotate(28deg);}
+				100% {transform: rotate(30deg);}
+			}
+			#chryouter5{
+				position: absolute;
+				left: 55%;
+				bottom: 0%;
+				width: 20%;
+				height: 25%;
+				transform: rotate(-20deg);
+				animation-name: ju5move;
+				animation-duration: 3s;
+				
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju5move{
+				0% {transform: translate(0,0);}
+				25% {transform: translate(-2%,0);}
+				50% {transform: translate(-5%,0);}
+				75% {transform: translate(-2%,0);}
+				100% {transform: translate(0,0);}
+			}
+			#chryouter6{
+				position: absolute;
+				right: -10%;
+				bottom: 18%;
+				width: 20%;
+				height: 25%;
+				transform: rotate(-20deg);
+				animation-name: ju6move;
+				animation-duration: 3s;
+				
+				animation-iteration-count: infinite;
+			}
+			@keyframes ju6move{
+				0% {transform: rotate(0deg);}
+				25% {transform: rotate(1deg);}
+				50% {transform: rotate(2deg);}
+				75% {transform: rotate(1deg);}
+				100% {transform: rotate(0deg);}
+			}
+			
+				#chryouter7{
+					position: absolute;
+					right: 20%;
+					bottom: 10%;
+					width: 15%;
+					height: 10%;
+					transform: rotate(-50deg);
+					animation-name: ju7move;
+					animation-duration: 5s;
+					
+					animation-iteration-count: infinite;
+				}
+				@keyframes ju7move{
+					0% {transform: rotate(-50deg);opacity: 0;}
+					25% {transform: rotate(45deg);opacity: 1;}
+					50% {transform: rotate(90deg);opacity: 1; }
+					75% {transform: rotate(120deg);opacity: 0.8;}
+					100% {transform: rotate(150deg);bottom: 0%;right: 40%;opacity: 0;}
+				}
+				#chryouter8{
+					position: absolute;
+					right: 5%;
+					bottom: 40%;
+					width: 10%;
+					height: 10%;
+					transform: rotate(-50deg);
+					animation-name: ju8move;
+					animation-duration: 5s;
+					
+					animation-iteration-count: infinite;
+				}
+				@keyframes ju8move{
+					0% {transform: rotate(-50deg);opacity: 0;}
+					25% {transform: rotate(-50deg);opacity: 1;}
+					50% {transform: rotate(-50deg);opacity: 1; }
+					75% {transform: rotate(-50deg);opacity: 0.8;}
+					100% {transform: rotate(-50deg);bottom: 10%;right: 30%;opacity: 0;}
+				}
+				#chryouter9{
+					position: absolute;
+					right: 40%;
+					bottom: 20%;
+					width: 10%;
+					height: 10%;
+					transform: rotate(0deg);
+					animation-name: ju9move;
+					animation-duration: 4s;
+					
+					animation-iteration-count: infinite;
+				}
+				@keyframes ju9move{
+					0% {transform: rotate(0deg);opacity: 0;}
+					25% {transform: rotate(0deg);opacity: 1;}
+					50% {transform: rotate(0deg);opacity: 1; }
+					75% {transform: rotate(0deg);opacity: 0.8;}
+					100% {transform: rotate(0deg);bottom: 20%;right: 30%;opacity: 0;}
+				}
+				#chryouter10{
+					position: absolute;
+					left: 20%;
+					bottom: 10%;
+					width: 15%;
+					height: 10%;
+					transform: rotate(-50deg);
+					animation-name: ju10move;
+					animation-duration: 6s;
+					animation-iteration-count: infinite;
+				}
+				@keyframes ju10move{
+					0% {transform: rotate(-50deg);opacity: 0;}
+					25% {transform: rotate(45deg);opacity: 1;}
+					50% {transform: rotate(90deg);opacity: 1; }
+					75% {transform: rotate(120deg);opacity: 0.8;}
+					100% {transform: rotate(150deg);bottom: 0%;left: 0%;opacity: 0;}
+				}
+				#btn_juhua{
+					position: absolute;
+					width: 100%;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					font-weight:normal;
+					font-size:large;
+					background-color:dimgray;
+					border-color: #B6B6B6;
+				}
+				/* #chryouter11{
+					position: absolute;
+					left: 80%;
+					bottom: 50%;
+					width: 50%;
+					height: 50%;
+					transform: rotate(0deg);
+					animation-name: ju11move;
+					animation-duration: 1s;
+					
+					animation-iteration-count: infinite;
+				}
+				@keyframes ju11move{
+					0% {transform: rotate(0deg);}
+					25% {transform: rotate(-50deg);}
+					50% {transform: rotate(0deg); }
+					75% {transform: rotate(50deg);}
+					100% {transform: rotate(0deg);}
+				} */
+				.number{
+					font-family: impact !important;
+					font-size: 20px !important;
+					font-weight: bold !important;
+					opacity: 1;
+					margin: 0;
+					padding: 0;
+				}
+				#numberout{
+					position: absolute;
+					left: 10%;
+					top: 65%;
+					width: 30%;
+					height: 5%;
+				}

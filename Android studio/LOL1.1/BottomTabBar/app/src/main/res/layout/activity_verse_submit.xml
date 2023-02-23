@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号:" />
+        <EditText
+            android:id="@+id/editID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="在此输入账号"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系电话：" />
+        <EditText
+            android:id="@+id/editTel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="在此输入联系电话"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细住址：" />
+
+        <EditText
+            android:id="@+id/editAdress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+            android:hint="在此输入地址"
+            android:singleLine="true"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一句：" />
+        <EditText
+            android:id="@+id/editTheOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="在此输入第一句"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第二句：" />
+        <EditText
+            android:id="@+id/editTheTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="在此输入第二句"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第三句：" />
+        <EditText
+            android:id="@+id/editTheThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="在此输入第三句"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text= "拍照"
+                />
+            <Button
+                android:id="@+id/btnXiangce"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:text= "相册"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imagePhoto"
+            android:layout_width="158dp"
+            android:layout_height="136dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="提交" />
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="返回" />
+</LinearLayout>
+</LinearLayout>

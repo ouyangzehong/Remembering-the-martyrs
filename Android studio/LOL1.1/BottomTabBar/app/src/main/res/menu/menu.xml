@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/FirstFragment"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        android:title="发现" />
+    <item
+        android:id="@+id/SecondFragment"
+        android:icon="@drawable/ic_baseline_ac_unit_24"
+        android:title="数据" />
+    <item
+        android:id="@+id/ThirdFragment"
+        android:icon="@drawable/ic_baseline_explore_24"
+        android:title="留言" />
+</menu>

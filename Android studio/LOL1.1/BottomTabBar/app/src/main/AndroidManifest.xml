@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bottomtabbar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Huodong"
+            android:label="活动">
+        </activity>
+        <activity android:name=".Verse_asp" />
+        <activity
+            android:name=".Verse"
+            android:label="三行情书">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Verse_submit"
+            android:label="提交">
+
+        </activity>
+        <activity
+            android:name=".up_mytelnumber"
+            android:label="邮箱" />
+        <activity android:name=".up_myschool_info" />
+        <activity
+            android:name=".up_Major"
+            android:label="专业" />
+        <activity
+            android:name=".up_Institute"
+            android:label="学院" />
+        <activity
+            android:name=".myhead_imge"
+            android:label="头像" />
+        <activity
+            android:name=".up_mypetname"
+            android:label="昵称" />
+        <activity
+            android:name=".information"
+            android:label="个人信息" />
+        <activity
+            android:name=".register"
+            android:label="注册" />
+        <activity
+            android:name=".AddQifuActivity"
+            android:label="祈福" />
+        <activity
+            android:name=".QifuActivity"
+            android:label="愿望墙" />
+        <activity
+            android:name=".New_note"
+            android:label="笔记" />
+        <activity
+            android:name=".MainActivityNote"
+            android:label="笔记" />
+        <activity
+            android:name=".MainActivity"
+            android:label="铭记历史" />
+        <activity
+            android:name=".login"
+            android:label="我记得你">
+
+        </activity>
+    </application>
+
+</manifest>

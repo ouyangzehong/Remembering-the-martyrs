@@ -1,0 +1,29 @@
+@import url('b5977d1618bd47b29983066544f3b558.css');
+
+html,
+body,
+#fg,
+#bg {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+  top: 0;
+}
+
+sub {
+  font-size: 15px;
+  display: block;
+}
+
+p {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}

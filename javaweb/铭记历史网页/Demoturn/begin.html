@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>纪念先烈</title>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/begin.css" />
+  </head>
+   
+  <body>
+    <section class="container">
+      <!-- 上部分的图片 -->
+      <ul class="imgbox"></ul>
+      <div class="wow fadeInLeft infoBox" data-wow-delay="1s">
+        <div class="left">记得</div>
+        <div class="right">
+          <h1>你记得我，我就活着</h1>
+          <p class="text"></p>
+        </div>
+      </div>
+      <ul class="imgbox imgbox-bottom"></ul>
+    </section>
+  </body>
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    $(function () {
+      /****   顶部图片   ***/
+      var list_top = [
+        {animated: 'fadeInUp', time: '0.5s', name: '邓铁梅', href: 'dengtiemei.html?name=邓铁梅' },
+        {animated: 'fadeInUp', time: '0.5s', name: '邓玉琢', href: 'dengyuzhuo.html?name=邓玉琢' },
+        {animated: 'fadeInUp', time: '0.5s', name: '高志航', href: 'gaozhihang.html?name=高志航' },
+        {animated: 'fadeInUp', time: '0.5s', name: '官惠民', href: 'index.html?name=官惠民' },
+        {animated: 'fadeInUp', time: '1.5s', name: '黄梅兴', href: 'index.html?name=黄梅兴' },
+        {animated: 'fadeInUp', time: '0.5s', name: '吉鸿昌', href: 'index.html?name=吉鸿昌' },
+        {animated: 'fadeInUp', time: '0.5s', name: '姜玉贞', href: 'index.html?name=姜玉贞' },
+        {animated: 'fadeInUp', time: '0.6s', name: '乐以琴', href: 'index.html?name=乐以琴' },
+        {animated: 'fadeInUp', time: '0.6s', name: '李红光', href: 'index.html?name=李红光' },
+        {animated: 'fadeInUp', time: '0.5s', name: '李学忠', href: 'index.html?name=李学忠' },
+        {animated: 'fadeInUp', time: '0.5s', name: '梁鉴堂', href: 'index.html?name=梁鉴堂' },
+        {animated: 'fadeInUp', time: '1.5s', name: '刘三春', href: 'index.html?name=刘三春' },
+        {animated: 'fadeInUp', time: '0.5s', name: '罗策群', href: 'index.html?name=罗策群' },
+        {animated: 'fadeInUp', time: '0.5s', name: '马威龙', href: 'index.html?name=马威龙' },
+        {animated: 'fadeInUp', time: '0.5s', name: '孟杰民', href: 'index.html?name=孟杰民' },
+        {animated: 'fadeInUp', time: '0.7s', name: '庞汉桢', href: 'index.html?name=庞汉桢' },
+        {animated: 'fadeInUp', time: '0.7s', name: '秦霖', href: 'index.html?name=秦霖' },
+        {animated: 'fadeInUp', time: '0.5s', name: '宋铁岩', href: 'index.html?name=宋铁岩' },
+        {animated: 'fadeInUp', time: '0.9s', name: '孙铭武', href: 'index.html?name=孙铭武' },
+        {animated: 'fadeInUp', time: '0.9s', name: '孙永勤', href: 'index.html?name=孙永勤' },
+      ]
+      let ul_top = ''
+      list_top.forEach((item) => {
+        let li = `
+     		<li  class="wow ${item.animated}" data-wow-delay="${item.time}">
+           		<a href="${item.href}"  style="background-image: url(img/${item.name}.jpg);">
+           	</a>
+        </li>
+     	`
+        ul_top += li
+      })
+      $('ul.imgbox').html(ul_top)
+      /****   底部图片   ***/
+      var list_bottom = [
+        { animated: 'fadeInUp', time: '0.5s', name: '滕久寿', href: 'index.html?name=滕久寿' },
+        { animated: 'fadeInUp', time: '0.5s', name: '佟麟阁', href: 'index.html?name=佟麟阁' },
+        { animated: 'fadeInUp', time: '0.5s', name: '童长荣', href: 'index.html?name=童长荣' },
+        { animated: 'fadeInUp', time: '0.5s', name: '王光宇', href: 'index.html?name=王光宇' },
+        { animated: 'fadeInUp', time: '1.5s', name: '王平陆', href: 'index.html?name=王平陆' },
+        { animated: 'fadeInUp', time: '0.5s', name: '王仁斋', href: 'index.html?name=王仁斋' },
+        { animated: 'fadeInUp', time: '0.5s', name: '吴克仁', href: 'index.html?name=吴克仁' },
+        { animated: 'fadeInUp', time: '0.6s', name: '夏国璋', href: 'index.html?name=夏国璋' },
+        { animated: 'fadeInUp', time: '0.6s', name: '萧山令', href: 'index.html?name=萧山令' },
+        { animated: 'fadeInUp', time: '0.5s', name: '谢彩轩', href: 'index.html?name=谢彩轩' },
+        { animated: 'fadeInUp', time: '0.5s', name: '阎海文', href: 'index.html?name=阎海文' },
+        { animated: 'fadeInUp', time: '1.5s', name: '姚中英', href: 'index.html?name=姚中英' },
+        { animated: 'fadeInUp', time: '0.5s', name: '易安华', href: 'index.html?name=易安华' },
+        { animated: 'fadeInUp', time: '0.5s', name: '张甲洲', href: 'index.html?name=张甲洲' },
+        { animated: 'fadeInUp', time: '0.5s', name: '张中华', href: 'index.html?name=张中华' },
+        { animated: 'fadeInUp', time: '0.7s', name: '赵崇德', href: 'index.html?name=赵崇德' },
+        { animated: 'fadeInUp', time: '0.7s', name: '赵一曼', href: 'index.html?name=赵一曼' },
+        { animated: 'fadeInUp', time: '0.5s', name: '郑廷珍', href: 'index.html?name=郑廷珍' },
+        { animated: 'fadeInUp', time: '0.9s', name: '郝梦龄', href: 'index.html?name=郝梦龄' },
+        { animated: 'fadeInUp', time: '0.9s', name: '朱赤', href: 'index.html?name=朱赤' },
+      ]
+      let ul_bottom = ''
+      list_bottom.forEach((item) => {
+        let li = `
+     		<li class="wow ${item.animated}" data-wow-delay="${item.time}">
+           		<a href="${item.href}"  style="background-image: url(img/${item.name}.jpg);">
+           		</a>
+        	</li>
+     `
+        ul_bottom += li
+      })
+      $('ul.imgbox-bottom').html(ul_bottom)
+
+      /****   动画   ***/
+      if (!/msie [6|7|8|9]/i.test(navigator.userAgent)) {
+        new WOW().init()
+      }
+      /****   动画  结束 ***/
+
+      //   文字动态
+	  /* */
+      var textList = ['你可曾听过','那些写给祖国的名字','刻在丰碑','或留在心里','你可曾看过','那些义无反顾的身影','迎着危险','或逆着风雨','寒来暑往，春去冬来','四季更迭，使命延续']
+      let i = 0
+      setInterval(() => {
+        if (i < textList.length) {
+          $('.text').text(textList[i])
+          i++
+		  
+        }
+      }, 2000)
+    })
+  </script>
+</html>

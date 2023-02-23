@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script src="js/typed.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				/* background:#ffffff; */
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				/* background: url(img/page2bg4.jpg) no-repeat; */
+				background-size: 100% 100%;
+				background-attachment: fixed;
+			}
+			#all {
+				position: absolute;
+				top: 35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				
+				
+				/* margin:250px auto;
+				-webkit-perspective:2500px; */
+			}
+			#imgs div {
+				position:absolute;
+				/* top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%); */
+				width: 235px;
+				height: 235px;
+				/* left:300px;
+				width:235px;
+				height:235px; */
+			}
+			#imgs img {
+				width:235px;
+				height:235px;
+				border-radius:15px;
+				opacity:0.6;
+				
+			}
+			#imgs {
+				-webkit-transform-style:preserve-3d;
+				animation:imgs 20s linear  infinite;
+			}
+			#h {
+				transform:rotatey(0deg) translatez(200px);
+			}
+			#qy {
+				transform:rotatey(60deg) translatez(200px);
+			}
+			#qz {
+				transform:rotatey(120deg) translatez(200px);
+			}
+			#hy {
+				transform:rotatey(180deg) translatez(200px);
+			}
+			#hz {
+				transform:rotatey(240deg) translatez(200px);
+			}
+			#q {
+				transform:rotatey(300deg) translatez(200px);
+			}
+			@keyframes imgs {
+				0% {
+				transform:rotatey(0deg) rotatex(30deg)
+			}
+			50% {
+				transform:rotatey(180deg) rotatex(-30deg)
+			}
+			100% {
+				transform:rotatey(360deg)rotatex(30deg)
+			}
+			}#imgs:hover {
+				-webkit-animation-play-state:paused;
+			}
+			#h img:hover,#qy img:hover,#hy img:hover,#qz img:hover,#hz img:hover,#q img:hover {
+				transform:scale(1.5);
+				opacity:1;
+			}
+			#h img,#qy img,#hy img,#qz img,#hz img,#q img {
+				transition:all 0.3s linear;
+				
+			}
+			.wenzi{
+				
+				margin-left: 20px;
+				margin-top: 3.125rem;
+			}
+			#typed {
+				font-size: 2rem;
+				line-height: 3rem;
+				color: #000000;
+				font-weight: lighter;
+				font-family: '华文楷体';
+			}
+			.typed-cursor {
+				opacity: 1;
+				font-weight: 100;
+				font-size: 1.5rem;
+				-webkit-animation: blink 0.7s infinite;
+				-moz-animation: blink 0.7s infinite;
+				-ms-animation: blink 0.7s infinite;
+				-o-animation: blink 0.7s infinite;
+				animation: blink 0.7s infinite;
+			}
+			@-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+			
+				50% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+			
+				50% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-moz-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+			
+				50% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-ms-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+			
+				50% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-o-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+			
+				50% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			.typed-fade-out {
+				opacity: 0;
+				animation: 0;
+				transition: opacity .25s;
+			}
+
+		</style>
+	</head>
+	<body>
+		<img src="img/page2bg.jpg" style="width: 100%;height: 100%;" >
+		<div class="wenzi">
+			<span id="typed" style="white-space:pre;"></span>
+		</div>
+		
+		<div id="all">
+			
+			<div id="imgs">
+				<div id="h">
+					<a href="nanrendong.html"><img src="img/南仁东.jpg" ></a>
+					
+				</div>
+				<div id="qy">
+					<img src="img/李文亮.jpg">
+				</div>
+				<div id="hy">
+					<a href="yuan/index.html"><img src="img/袁隆平.jpg"></a>
+				</div>
+				<div id="qz">
+					<img src="./img/黄文秀.jpg">
+				</div>
+				<div id="hz">
+					<img src="img/朱显谟.jpg">
+				</div>
+				<div id="q">
+					<img src="img/纪念碑.jpg">
+				</div>
+			</div>
+		  </div>
+		  <!-- <script>
+		  	
+		  		Typed.new("#typed", {
+		  			/* strings: [
+		  				' 今年 是党的一百周年 ^1000\n 来临之前 ^1000\n 有很多中国科学家永远离开了我们^1000\n 这个世界热闹喧嚣^1000\n 他们却又走的如此安静^1000\n 与他们这一生所为相比 实在太轻^1000\n 但却因他们 才有了你我口中那句^1000\n "百年恰是风华正茂！"'
+		  			], */
+					strings:[' 身如逆流船，^1000\n 心比铁石坚。^1000\n 望父全儿志，^1000\n 至死不怕难。'],
+		  			typeSpeed: 30,
+		  			loop: false,
+		  			fadeOut: true,
+		  			contentType: 'html',
+		  		});
+		  	
+		  </script> -->
+	</body>
+</html>

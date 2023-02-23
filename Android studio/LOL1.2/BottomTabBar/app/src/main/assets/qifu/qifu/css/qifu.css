@@ -1,0 +1,108 @@
+#btn_qifu {
+	position: absolute;
+	left: 50%;
+	bottom: 40%;
+	width: 5%;
+	height: 8%;
+	/* background-color: #FE5757; */
+	border: #ebb655 2px solid;
+	z-index: 1000;
+}
+
+.denglong3 {
+	position: absolute;
+	bottom: 0%;
+	left: 45%;
+	padding: 0;
+	width: 20%;
+	height: 20%;
+	background: url(../img/denglong.png) no-repeat center/cover;
+	transform: scale(2.5);
+	animation-name: dl3move;
+	animation-duration: 30s;
+	/* animation-iteration-count: infinite; */
+	z-index: 1100;
+	display: none;
+}
+
+@keyframes dl3move {
+	0% {
+		bottom: 0%;
+		transform: scale(2.5);
+		opacity: 1;
+	}
+
+	100% {
+		bottom: 90%;
+		transform: scale(0.5);
+		opacity: 0.2;
+	}
+}
+
+.write {
+
+	font-family: "Space Mono", monospace;
+	background: rgba(000000);
+	padding: 25px 35px;
+	position: absolute;
+	width: 50%;
+	/* height: 50%; */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0) rotate(360deg);
+	
+	box-shadow: 0 0 60px -15px black;
+	transition: 2s;
+	border-radius: 16px;
+	z-index: 1001;
+	font-size: 19px;
+	 padding-top: 10%; 
+
+}
+
+.guanbi {
+	font-weight: bolder;
+	color: #ffffff;
+	font-size: 20px;
+	font-family: "Roboto Mono", monospace;
+	position: absolute;
+	left: 5%;
+	top: 3%;
+	z-index: 1005;
+}
+.writeinner{
+	margin: 10px;
+	color: #efc371;;
+}
+.writeinner2{
+	margin: 10px;
+	color:#b5bc67 ;
+	margin-top: 40px;
+	
+	text-align: right;
+}
+.writeinner3{
+	margin: 10px;
+	
+	color: #ae94c0;
+	text-align: right;
+}
+.writeinner4{
+	margin: 10px;
+	
+	color: #efc371;
+}
+.opend{
+	
+	transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+#moon {
+	position: absolute;
+	right: 15%;
+	top: 10%;
+	width: 20%;
+	height: 20%;
+	background: url(../img/超级月亮1.png) no-repeat center/cover;
+	z-index: 1000;
+}
